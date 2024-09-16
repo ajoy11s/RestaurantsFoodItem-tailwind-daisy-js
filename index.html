@@ -21,12 +21,12 @@
           </svg>
         </div>
         <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-        <li onclick="CallFoodData('Potato')" id="potato1"><a>Potato</a></li>
-        <li onclick="CallFoodData('Soup')"><a>Soup</a></li>
-        <li onclick="CallFoodData('Chicken')"><a>Chicken</a></li>
-        <li onclick="CallFoodData('Beef')"><a>Beef</a></li>
-        <li onclick="CallFoodData('Vegetarian')"><a>Vegetarian</a></li>
-        <li onclick="CallFoodData('Seafood')"><a>Seafood</a></li>
+          <li onclick="CallFoodData('Potato')" id="potato_sm"><a>Potato</a></li>
+          <li onclick="CallFoodData('Soup')" id="soup_sm"><a>Soup</a></li>
+          <li onclick="CallFoodData('Chicken')" id="chicken_sm"><a>Chicken</a></li>
+          <li onclick="CallFoodData('Beef')" id="beef_sm"><a>Beef</a></li>
+          <li onclick="CallFoodData('Vegetarian')" id="vegetarian_sm"><a>Vegetarian</a></li>
+          <li onclick="CallFoodData('Seafood')" id="seafood_sm"><a>Seafood</a></li>
         </ul>
       </div>
       <a href="#"><img src="Resources/logo/restaurant-logo.png" height="50px" width="50px" /></a>
@@ -166,8 +166,7 @@
         )
         .catch(error => console.error(error));
 
-        console.log(searchTerm);
-
+        //Large Device lg
         if(searchTerm == 'Potato'){
           document.getElementById("potato").style.backgroundColor = "tomato";
           document.getElementById("soup").style.backgroundColor = null;
@@ -221,6 +220,62 @@
           document.getElementById("chicken").style.backgroundColor = null;
           document.getElementById("vegetarian").style.backgroundColor = null;
           document.getElementById("seafood").style.borderRadius = "10px";
+        }
+
+         //Large Device sm and md
+         if(searchTerm == 'Potato'){
+          document.getElementById("potato_sm").style.backgroundColor = "tomato";
+          document.getElementById("soup_sm").style.backgroundColor = null;
+          document.getElementById("chicken_sm").style.backgroundColor = null;
+          document.getElementById("beef_sm").style.backgroundColor = null;
+          document.getElementById("vegetarian_sm").style.backgroundColor = null;
+          document.getElementById("seafood_sm").style.backgroundColor = null;
+          document.getElementById("potato_sm").style.borderRadius = "10px";
+        }
+        if(searchTerm == 'Soup'){
+          document.getElementById("soup_sm").style.backgroundColor = "tomato";
+          document.getElementById("potato_sm").style.backgroundColor = null;
+          document.getElementById("chicken_sm").style.backgroundColor = null;
+          document.getElementById("beef_sm").style.backgroundColor = null;
+          document.getElementById("vegetarian_sm").style.backgroundColor = null;
+          document.getElementById("seafood_sm").style.backgroundColor = null;
+          document.getElementById("soup_sm").style.borderRadius = "10px";
+        }
+        if(searchTerm == 'Chicken'){
+          document.getElementById("chicken_sm").style.backgroundColor = "tomato";
+          document.getElementById("potato_sm").style.backgroundColor = null;
+          document.getElementById("soup_sm").style.backgroundColor = null;
+          document.getElementById("beef_sm").style.backgroundColor = null;
+          document.getElementById("vegetarian_sm").style.backgroundColor = null;
+          document.getElementById("seafood_sm").style.backgroundColor = null;
+          document.getElementById("chicken_sm").style.borderRadius = "10px";
+        }
+        if(searchTerm == 'Beef'){
+          document.getElementById("beef_sm").style.backgroundColor = "tomato";
+          document.getElementById("potato_sm").style.backgroundColor = null;
+          document.getElementById("soup_sm").style.backgroundColor = null;
+          document.getElementById("chicken_sm").style.backgroundColor = null;
+          document.getElementById("vegetarian_sm").style.backgroundColor = null;
+          document.getElementById("seafood_sm").style.backgroundColor = null;
+          document.getElementById("beef_sm").style.borderRadius = "10px";
+        }
+        if(searchTerm == 'Vegetarian'){
+          document.getElementById("vegetarian_sm").style.backgroundColor = "tomato";
+          document.getElementById("potato_sm").style.backgroundColor = null;
+          document.getElementById("soup_sm").style.backgroundColor = null;
+          document.getElementById("chicken_sm").style.backgroundColor = null;
+          document.getElementById("beef_sm").style.backgroundColor = null;
+          document.getElementById("seafood_sm").style.backgroundColor = null;
+          document.getElementById("vegetarian_sm").style.borderRadius = "10px";
+        }
+        if(searchTerm == 'Seafood'){
+          document.getElementById("seafood_sm").style.backgroundColor = "tomato";
+          document.getElementById("beef_sm").style.backgroundColor = null;
+          document.getElementById("potato_sm").style.backgroundColor = null;
+          document.getElementById("soup_sm").style.backgroundColor = null;
+          document.getElementById("chicken_sm").style.backgroundColor = null;
+          document.getElementById("vegetarian_sm").style.backgroundColor = null;
+          document.getElementById("seafood_sm").style.borderRadius = "10px";
         }
         
     }
