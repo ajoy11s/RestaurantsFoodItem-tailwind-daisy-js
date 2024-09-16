@@ -22,7 +22,8 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
             </svg>
           </div>
-          <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow font-bold">
+          <ul tabindex="0"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow font-bold">
             <li onclick="CallFoodData('Potato')" id="potato_sm"><a>Potato</a></li>
             <li onclick="CallFoodData('Soup')" id="soup_sm"><a>Soup</a></li>
             <li onclick="CallFoodData('Chicken')" id="chicken_sm"><a>Chicken</a></li>
@@ -32,8 +33,7 @@
           </ul>
         </div>
         <a href="#"><img src="Resources/logo/restaurant-logo.png" height="50px" width="50px" /></a>
-        <span style="color: tomato; font-weight: bold;">R</span><span>estaurant</span><img
-          src="Resources/icons/tick-icon.png" height="30px" width="30px" /> <span
+        <span style="color: tomato; font-weight: bold;">R</span><span>estaurant</span><span
           style="color: tomato; font-weight: bold;">F</span><span>ood</span>
       </div>
       <div class="navbar-center hidden lg:flex">
@@ -60,12 +60,11 @@
           <div class="hero-content text-neutral-content text-center py-20">
             <div class="max-w-md">
               <h2 class="mb-5 text-5xl font-bold">Potato</h2>
-              <p class="mb-5">
+              <p class="mb-5 text-center">
                 Potatoes are processed into a great variety of products, including cooked potatoes,
                 par-fried potato strips, french fries, potato chips, potato starch, potato granules,
                 potato flakes, and dehydrated diced potatoes, among others.
               </p>
-              <button class="btn btn-primary">About Potato</button>
             </div>
           </div>
         </div>
@@ -82,12 +81,10 @@
           <div class="hero-content text-neutral-content text-center py-20">
             <div class="max-w-md">
               <h2 class="mb-5 text-5xl font-bold">Soup</h2>
-              <p class="mb-5">
-                Potatoes are processed into a great variety of products, including cooked potatoes,
-                par-fried potato strips, french fries, potato chips, potato starch, potato granules,
-                potato flakes, and dehydrated diced potatoes, among others.
+              <p class="mb-5 text-neutral-content">
+                Soup is a primarily liquid food, generally served warm or hot,
+                that is made by combining ingredients of meat or vegetables with stock, milk, or water.
               </p>
-              <button class="btn btn-primary">About Soup</button>
             </div>
           </div>
         </div>
@@ -103,12 +100,10 @@
           <div class="hero-content text-neutral-content text-center py-20">
             <div class="max-w-md">
               <h2 class="mb-5 text-5xl font-bold">Chicken</h2>
-              <p class="mb-5">
-                Potatoes are processed into a great variety of products, including cooked potatoes,
-                par-fried potato strips, french fries, potato chips, potato starch, potato granules,
-                potato flakes, and dehydrated diced potatoes, among others.
+              <p class="mb-5 text-center">
+                The chicken (Gallus domesticus) is a large and round short-winged bird,
+                domesticated from the red junglefowl of Southeast Asia around 8,000 years ago.
               </p>
-              <button class="btn btn-primary">About Chicken</button>
             </div>
           </div>
         </div>
@@ -124,12 +119,10 @@
           <div class="hero-content text-neutral-content text-center py-20">
             <div class="max-w-md">
               <h2 class="mb-5 text-5xl font-bold">Meat</h2>
-              <p class="mb-5">
-                Potatoes are processed into a great variety of products, including cooked potatoes,
-                par-fried potato strips, french fries, potato chips, potato starch, potato granules,
-                potato flakes, and dehydrated diced potatoes, among others.
+              <p class="mb-5 text-center">
+                Meat is animal tissue, often muscle, that is eaten as food.
+                Humans have hunted and farmed other animals for meat since prehistory.
               </p>
-              <button class="btn btn-primary">About Meat</button>
             </div>
           </div>
         </div>
@@ -145,6 +138,20 @@
     <div id="container">
     </div>
     <!-- data show section in card end -->
+    <!-- Modal popup data details start -->
+    <dialog id="my_modal_3" class="modal">
+      <div class="modal-box">
+        <form method="dialog">
+          <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+        </form>
+        <h2 id="modal_meal"></h2>
+        <p id="modal_category"></p>
+        <p id="modal_area"></p>
+        <p class="py-4" id="modal_instructions"></p>
+      </div>
+    </dialog>
+    <!-- Modal popup data details end -->
+
 
     <!-- FAQ section start -->
     <section class="my-10">
@@ -153,21 +160,33 @@
         <input type="radio" name="my-accordion-2" checked="checked" />
         <div class="collapse-title text-xl font-medium">About Potato</div>
         <div class="collapse-content">
-          <p>hello</p>
+          <p>Potatoes are processed into a great variety of products, including cooked potatoes,
+            par-fried potato strips, french fries, potato chips, potato starch, potato granules,
+            potato flakes, and dehydrated diced potatoes, among others.</p>
         </div>
       </div>
       <div class="collapse collapse-arrow bg-base-200">
         <input type="radio" name="my-accordion-2" />
         <div class="collapse-title text-xl font-medium">About Soup</div>
         <div class="collapse-content">
-          <p>hello</p>
+          <p>Soup is a primarily liquid food, generally served warm or hot,
+            that is made by combining ingredients of meat or vegetables with stock, milk, or water.</p>
         </div>
       </div>
       <div class="collapse collapse-arrow bg-base-200">
         <input type="radio" name="my-accordion-2" />
         <div class="collapse-title text-xl font-medium">About Chicken</div>
         <div class="collapse-content">
-          <p>hello</p>
+          <p>The chicken (Gallus domesticus) is a large and round short-winged bird,
+            domesticated from the red junglefowl of Southeast Asia around 8,000 years ago.</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">About Meat</div>
+        <div class="collapse-content">
+          <p>Meat is animal tissue, often muscle, that is eaten as food.
+            Humans have hunted and farmed other animals for meat since prehistory.</p>
         </div>
       </div>
     </section>
@@ -176,7 +195,7 @@
     <!-- Review/Ratting section start -->
     <section class="my-10 bg-base-200 rounded">
       <h2 class="text-center text-3xl my-5">Please Reviews</h2>
-      <div class="rating text-center gap-4">
+      <div class="rating gap-6 w-full justify-center">
         <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" />
         <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" />
         <input type="radio" name="rating-4" class="mask mask-star-2 bg-green-500" />
@@ -188,12 +207,26 @@
 
 
     <!-- Footer start -->
+    <dialog id="my_modal_1" class="modal">
+      <div class="modal-box">
+        <h3 class="text-lg font-bold">Name: Ajoy Kumar Paul</h3>
+        <p class="py-4">Interactive Bootcamp</p>
+        <p class="py-4">Contact: noemail@testmail.com</p>
+        <p class="py-4">Service: HTML,CSS,Javascript,React JS,Android,Android Studio,SQL,SQLite etc.</p>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
     <footer class="footer footer-center bg-base-200 text-base-content rounded p-10">
       <nav class="grid grid-flow-col gap-4">
-        <a class="link link-hover">About us</a>
-        <a class="link link-hover">Contact</a>
-        <a class="link link-hover">Services</a>
-        <a class="link link-hover">Others</a>
+        <a class="link link-hover" onclick="my_modal_1.showModal()">About us</a>
+        <a class="link link-hover" onclick="my_modal_1.showModal()">Contact</a>
+        <a class="link link-hover" onclick="my_modal_1.showModal()">Services</a>
+        <a class="link link-hover" onclick="my_modal_1.showModal()">Others</a>
       </nav>
       <nav>
         <div class="grid grid-flow-col gap-4">
@@ -228,144 +261,8 @@
     </footer>
     <!-- Footer end -->
   </div>
-  <script>
-    function CallFoodData(searchTerm) {
-      //const searchTerm = 'Potato';
 
-      fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchTerm}`)
-        .then(response => response.json())
-        .then(data => {
-          //var count = Object.keys(data.meals).length;
-          let text = " <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>";
-          for (let x in data.meals) {
-            text += "<div class='card bg-base-100 w-96 md:w-96 lg:w-72 h-96 md:h-96 lg:h-400px shadow-xl'>";
-            text += "<figure class='px-10 pt-10'><img src='" + data.meals[x]['strMealThumb'] + "' alt='Shoes'class='rounded-xl'  /></figure>";
-            text += "<div class='card-body items-left text-left'><h3 class='card-title'>" + data.meals[x]['strMeal'].substr(0, 20) + "..." + "</h3>";
-            text += "<p>" + data.meals[x]['strInstructions'].substr(0, 50) + "..." + "</p>";
-            text += "<div class='card-actions'><button class='btn btn-primary'>Details</button> </div>";
-            text += "</div></div>";
-          }
-          text += "</div>"
-          document.getElementById("container").innerHTML = text;
-
-        }
-        )
-        .catch(error => console.error(error));
-
-      //Large Device lg
-      if (searchTerm == 'Potato') {
-        document.getElementById("potato").style.backgroundColor = "tomato";
-        document.getElementById("soup").style.backgroundColor = null;
-        document.getElementById("chicken").style.backgroundColor = null;
-        document.getElementById("beef").style.backgroundColor = null;
-        document.getElementById("vegetarian").style.backgroundColor = null;
-        document.getElementById("seafood").style.backgroundColor = null;
-        document.getElementById("potato").style.borderRadius = "10px";
-      }
-      if (searchTerm == 'Soup') {
-        document.getElementById("soup").style.backgroundColor = "tomato";
-        document.getElementById("potato").style.backgroundColor = null;
-        document.getElementById("chicken").style.backgroundColor = null;
-        document.getElementById("beef").style.backgroundColor = null;
-        document.getElementById("vegetarian").style.backgroundColor = null;
-        document.getElementById("seafood").style.backgroundColor = null;
-        document.getElementById("soup").style.borderRadius = "10px";
-      }
-      if (searchTerm == 'Chicken') {
-        document.getElementById("chicken").style.backgroundColor = "tomato";
-        document.getElementById("potato").style.backgroundColor = null;
-        document.getElementById("soup").style.backgroundColor = null;
-        document.getElementById("beef").style.backgroundColor = null;
-        document.getElementById("vegetarian").style.backgroundColor = null;
-        document.getElementById("seafood").style.backgroundColor = null;
-        document.getElementById("chicken").style.borderRadius = "10px";
-      }
-      if (searchTerm == 'Beef') {
-        document.getElementById("beef").style.backgroundColor = "tomato";
-        document.getElementById("potato").style.backgroundColor = null;
-        document.getElementById("soup").style.backgroundColor = null;
-        document.getElementById("chicken").style.backgroundColor = null;
-        document.getElementById("vegetarian").style.backgroundColor = null;
-        document.getElementById("seafood").style.backgroundColor = null;
-        document.getElementById("beef").style.borderRadius = "10px";
-      }
-      if (searchTerm == 'Vegetarian') {
-        document.getElementById("vegetarian").style.backgroundColor = "tomato";
-        document.getElementById("potato").style.backgroundColor = null;
-        document.getElementById("soup").style.backgroundColor = null;
-        document.getElementById("chicken").style.backgroundColor = null;
-        document.getElementById("beef").style.backgroundColor = null;
-        document.getElementById("seafood").style.backgroundColor = null;
-        document.getElementById("vegetarian").style.borderRadius = "10px";
-      }
-      if (searchTerm == 'Seafood') {
-        document.getElementById("seafood").style.backgroundColor = "tomato";
-        document.getElementById("beef").style.backgroundColor = null;
-        document.getElementById("potato").style.backgroundColor = null;
-        document.getElementById("soup").style.backgroundColor = null;
-        document.getElementById("chicken").style.backgroundColor = null;
-        document.getElementById("vegetarian").style.backgroundColor = null;
-        document.getElementById("seafood").style.borderRadius = "10px";
-      }
-
-      //Large Device sm and md
-      if (searchTerm == 'Potato') {
-        document.getElementById("potato_sm").style.backgroundColor = "tomato";
-        document.getElementById("soup_sm").style.backgroundColor = null;
-        document.getElementById("chicken_sm").style.backgroundColor = null;
-        document.getElementById("beef_sm").style.backgroundColor = null;
-        document.getElementById("vegetarian_sm").style.backgroundColor = null;
-        document.getElementById("seafood_sm").style.backgroundColor = null;
-        document.getElementById("potato_sm").style.borderRadius = "10px";
-      }
-      if (searchTerm == 'Soup') {
-        document.getElementById("soup_sm").style.backgroundColor = "tomato";
-        document.getElementById("potato_sm").style.backgroundColor = null;
-        document.getElementById("chicken_sm").style.backgroundColor = null;
-        document.getElementById("beef_sm").style.backgroundColor = null;
-        document.getElementById("vegetarian_sm").style.backgroundColor = null;
-        document.getElementById("seafood_sm").style.backgroundColor = null;
-        document.getElementById("soup_sm").style.borderRadius = "10px";
-      }
-      if (searchTerm == 'Chicken') {
-        document.getElementById("chicken_sm").style.backgroundColor = "tomato";
-        document.getElementById("potato_sm").style.backgroundColor = null;
-        document.getElementById("soup_sm").style.backgroundColor = null;
-        document.getElementById("beef_sm").style.backgroundColor = null;
-        document.getElementById("vegetarian_sm").style.backgroundColor = null;
-        document.getElementById("seafood_sm").style.backgroundColor = null;
-        document.getElementById("chicken_sm").style.borderRadius = "10px";
-      }
-      if (searchTerm == 'Beef') {
-        document.getElementById("beef_sm").style.backgroundColor = "tomato";
-        document.getElementById("potato_sm").style.backgroundColor = null;
-        document.getElementById("soup_sm").style.backgroundColor = null;
-        document.getElementById("chicken_sm").style.backgroundColor = null;
-        document.getElementById("vegetarian_sm").style.backgroundColor = null;
-        document.getElementById("seafood_sm").style.backgroundColor = null;
-        document.getElementById("beef_sm").style.borderRadius = "10px";
-      }
-      if (searchTerm == 'Vegetarian') {
-        document.getElementById("vegetarian_sm").style.backgroundColor = "tomato";
-        document.getElementById("potato_sm").style.backgroundColor = null;
-        document.getElementById("soup_sm").style.backgroundColor = null;
-        document.getElementById("chicken_sm").style.backgroundColor = null;
-        document.getElementById("beef_sm").style.backgroundColor = null;
-        document.getElementById("seafood_sm").style.backgroundColor = null;
-        document.getElementById("vegetarian_sm").style.borderRadius = "10px";
-      }
-      if (searchTerm == 'Seafood') {
-        document.getElementById("seafood_sm").style.backgroundColor = "tomato";
-        document.getElementById("beef_sm").style.backgroundColor = null;
-        document.getElementById("potato_sm").style.backgroundColor = null;
-        document.getElementById("soup_sm").style.backgroundColor = null;
-        document.getElementById("chicken_sm").style.backgroundColor = null;
-        document.getElementById("vegetarian_sm").style.backgroundColor = null;
-        document.getElementById("seafood_sm").style.borderRadius = "10px";
-      }
-
-    }
-  </script>
+  <script src="app.js"></script>
 </body>
 
 </html>
