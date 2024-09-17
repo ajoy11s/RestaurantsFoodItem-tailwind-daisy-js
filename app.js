@@ -23,7 +23,7 @@ function CallFoodData(searchTerm) {
         text += "</div>"
         document.getElementById("container").innerHTML = text;
         //const myJSON = JSON.stringify(data_Object);
-        var data = JSON.parse(JSON.stringify(data_Object));
+        const data = JSON.parse(JSON.stringify(data_Object));
         console.log(data);
        
         console.log('typeof retrievedObject: ' + typeof data_Object);
