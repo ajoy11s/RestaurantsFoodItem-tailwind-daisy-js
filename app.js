@@ -7,7 +7,7 @@ function CallFoodData(searchTerm) {
         //var count = Object.keys(data.meals).length;
         let text = " <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12'>";
         for (let x in data.meals) {
-          text += "<div class='card bg-base-100 w-96 md:w-96 lg:w-72 h-96 md:h-96 lg:h-400px shadow-xl'>";
+          text += "<div class='card bg-base-100 w-80 md:w-96 lg:w-72 h-96 md:h-96 lg:h-400px shadow-xl'>";
           text += "<figure class='px-10 pt-10'><img src='" + data.meals[x]['strMealThumb'] + "' alt='Shoes'class='rounded-xl'  /></figure>";
           text += "<div class='card-body items-left text-left'><h3 class='card-title'>" + data.meals[x]['strMeal'].substr(0, 20) + "..." + "</h3>";
           text += "<p>" + data.meals[x]['strInstructions'].substr(0, 50) + "..." + "</p>";
