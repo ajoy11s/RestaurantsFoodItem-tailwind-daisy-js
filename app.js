@@ -4,8 +4,6 @@ function CallFoodData(searchTerm) {
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchTerm}`)
       .then(response => response.json())
       .then(data => {
-        const data_Object = localStorage.getItem("data_Object") || 0;
-        localStorage.setItem("data_Object", data.meals);
         let text = " <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12'>";
         for (let x in data.meals) {
           text += "<div class='card bg-base-100 w-80 md:w-96 lg:w-72 h-96 md:h-96 lg:h-400px shadow-xl'>";
@@ -22,12 +20,7 @@ function CallFoodData(searchTerm) {
         }
         text += "</div>"
         document.getElementById("container").innerHTML = text;
-        //const myJSON = JSON.stringify(data_Object);
-        const data = JSON.parse(JSON.stringify(data_Object));
-        console.log(data);
-       
-        console.log('typeof retrievedObject: ' + typeof data_Object);
-        console.log('Value of retrievedObject: ' + data_Object);
+    
 
       }
       )
